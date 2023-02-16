@@ -1,0 +1,46 @@
+﻿@model IEnumerable<PatientViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<body >
+    <div class="row">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col">
+                    <h2 style="color:black;font-weight:bold;">List Of Patients</h2>
+                </div>
+            </div>
+            <div class="col text-end">
+                <a asp-controller="Patient" asp-action="Create" class="btn btn-warning">Create new Appointment</a>
+            </div>
+            <div class="row">
+                <div>
+                    <table class="table">
+
+                        <thead>
+                            <tr style="color:black;font-weight:bold;">
+                                <th>Name</th>
+
+                            </tr>
+                        </thead>
+                        <tbody style="color:lightgreen;font-weight:bold;">
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@item.FirstName</td>
+                                    <td>
+                                        <a style="color:black" asp-controller="Patient" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                        <a style="color:black" asp-controller="Patient" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a style="color:black" asp-controller="Patient" asp-action="Edit" asp-route-id="@item.Id">Edit</a>&nbsp;
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,49 @@
+﻿@model PatientViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1> Edit Patient Details</h1>
+
+
+<form asp-controller="Patient" asp-action="Edit" method="post">
+    <div class="row">
+        <div class="col-md-4">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="mb-2">
+                <label asp-for="FirstName" class="form-label"></label>
+                <input type="text" asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="LastName" class="form-label"></label>
+                <input type="text" asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="Age" class="form-label"></label>
+                <input type="text" asp-for="Age" class="form-control" />
+
+                <span asp-validation-for="Age"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="Spec" class="form-label"></label>
+                <input type="text" asp-for="Spec" class="form-control" />
+                <span asp-validation-for="Spec"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="SlotDate" class="form-label"></label>
+                <input type="text" asp-for="SlotDate" class="form-control" />
+                <span asp-validation-for="SlotDate"></span>
+            </div>
+            <div class="mb-2">
+                <label asp-for="MobileNo" class="form-label"></label>
+                <input type="text" asp-for="MobileNo" class="form-control" />
+                <span asp-validation-for="MobileNo"></span>
+            </div>
+            <div class="mt-2 d-grid">
+                <input type="submit" class="btn btn-primary" value="Update" />
+            </div>
+        </div>
+    </div>
+</form>
