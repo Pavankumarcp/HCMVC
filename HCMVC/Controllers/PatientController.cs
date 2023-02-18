@@ -138,7 +138,7 @@ namespace HCMVC.Controllers
             return View();
 
         }
-        [HttpPost("Patient/UpdateDoctor/{id}")]
+        [HttpPost("Patient/Edit/{id}")]
 
         public async Task<IActionResult> Edit(PatientViewModel form)
         {
@@ -147,7 +147,7 @@ namespace HCMVC.Controllers
                 using (var client = new HttpClient())
                 {
                     client.BaseAddress = new Uri(_configuration["ApiUrl:api"]);
-                    var result = await client.PutAsJsonAsync($"Patient/UpdateDoctor/{form.Id}", form);
+                    var result = await client.PutAsJsonAsync($"Patient/UpdatePatient/{form.Id}", form);
                     if (result.StatusCode == System.Net.HttpStatusCode.NoContent)
                     {
                         return RedirectToAction("PatientDetails");

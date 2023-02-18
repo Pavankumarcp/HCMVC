@@ -3,25 +3,540 @@
 }
 <!DOCTYPE html>
 <html lang="en">
-    <body>
+
+   @* <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-left:500px;">
+                <div style="margin-left:200px;">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0" >
+                 <li   class="nav-item">
+                    <a class="nav-link" href="#" >Home</a>
+                 </li>
+                 <li class="nav-item">
                         <a class="nav-link" asp-action="DoctorDetails" asp-controller="Doctor">Doctor</a>
-              </li>
-              <li class="nav-item">
+                 </li>
+                 <li class="nav-item">
                         <a class="nav-link" asp-action="PatientDetails" asp-controller="Patient">Patient</a>
-              </li>    
-            </ul>
+                 </li>
+                 <li class="nav-item">
+                        <a class="nav-link" asp-action="Login" asp-controller="Doctor">Login</a>
+                 </li>
+             </ul>
+             </div>
           </div>
             <a asp-controller="Patient" asp-action="Create" class="btn btn-primary">Book an Appointment</a>
         </div>
-    </body>
+        </nav>
+    </body>*@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment System </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-heartbeat"></i> Infinite Hospitals</a>
+        <nav class="navbar text-left">
+            <a asp-controller="Patient" asp-action="Create">Book Your Appointment</a>
+            <a asp-controller="Doctor" asp-action="Login">Doctor</a>
+            <a asp-controller="Patient" asp-action="PatientDetails">Patient</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+    </header>
+    <section class="home" id="home">
+
+        <div class="image">
+            <img src="https://media.istockphoto.com/id/1306095257/photo/preparation-for-the-beginning-of-surgical-operation-with-a-cut-group-of-surgeons-at-work-in.jpg?b=1&s=170667a&w=0&k=20&c=jdLBnP2lT0fYrNny4-cMssT2eIRcR77GiYM5LNFhXPQ=" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br />
+            <br />
+            <img class="img1" src="https://static.vecteezy.com/system/resources/previews/001/822/322/original/cartoon-couple-doctors-waving-free-vector.jpg">
+        </div>
+
+        <div class="content">
+            <h3>stay safe, stay healthy</h3>
+            <p>“Health is a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity.”</p>
+
+        </div>
+
+    </section>
+
+    <section class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-user-md"></i>
+            <h3>40+</h3>
+            <p>doctors at work</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-users"></i>
+            <h3>120+</h3>
+            <p>satisfied patients</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-procedures"></i>
+            <h3>80+</h3>
+            <p>bed facility</p>
+        </div>
+
+    </section>
+
+
+    <section class="services" id="services">
+
+        <h1 class="heading"> our <span>services</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-notes-medical"></i>
+                <h3>free checkups</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+
+            </div>
+
+            <div class="box">
+                <i class="fas fa-ambulance"></i>
+                <h3>24/7 ambulance</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+
+            </div>
+
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>expert doctors</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad, omnis.</p>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> <span>about</span> us </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ad3eggT8jmaEXT_VZejy1M7ELtsxfMr4lg&usqp=CAU" alt="">
+            </div>
+
+            <div class="content">
+                <h3>we take care of your healthy life</h3>
+                <p>A person who has good physical health is likely to have bodily functions and processes working at their peak.</p>
+                <p>This is not only due not only to an absence of disease. Regular exercise, balanced nutrition, and adequate rest all contribute to good health. </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="doctors" id="doctors">
+
+        <h1 class="heading"> our <span>doctors</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://www.pngitem.com/pimgs/m/515-5158817_telemedicine-doctor-hd-png-download.png" alt="">
+                <h3>Dr Shailesh Mishra</h3>
+                <span>Expert in cardiology</span>
+            </div>
+
+
+            <div class="box">
+
+
+                <img src="https://t3.ftcdn.net/jpg/02/95/51/80/360_F_295518052_aO5d9CqRhPnjlNDTRDjKLZHNftqfsxzI.jpg" />
+                <h3>Dr Suyash Tiwari</h3>
+                <span>Expert in general checkup</span>
+            </div>
+
+
+
+        </div>
+
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <footer>
+
+        <section class="footer">
+            <br /><br />
+            <br />
+        </section>
+    </footer>
+
+
+</body>
+</html>
+
+<script>
+    let menu = document.querySelector('#menu-btn');
+    let navbar = document.querySelector('.navbar');
+    menu.onclick = () => {
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    }
+    window.onscroll = () => {
+        menu.classList.remove('fa-times');
+        navbar.classList.remove('active');
+    }
+</script>
+
+
+<style>
+    @@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+    :root {
+        --green: #16a085;
+        --black: #444;
+        --light-color: #777;
+        --box-shadow: .5rem .5rem 0 rgba(22, 160, 133, .2);
+        --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+        --border: .2rem solid var(--green);
+    }
+
+    * {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+        transition: all .2s ease-out;
+        text-decoration: none;
+    }
+
+    html {
+        font-size: 62.5%;
+        overflow-x: hidden;
+        scroll-padding-top: 7rem;
+        scroll-behavior: smooth;
+    }
+
+    section {
+        padding: 2rem 9%;
+    }
+
+        section:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+    .heading {
+        text-align: center;
+        padding-bottom: 2rem;
+        text-shadow: var(--text-shadow);
+        text-transform: uppercase;
+        color: var(--black);
+        font-size: 5rem;
+        letter-spacing: .4rem;
+    }
+
+        .heading span {
+            text-transform: uppercase;
+            color: var(--green);
+        }
+
+    .btn {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: .5rem;
+        padding-left: 1rem;
+        border: var(--border);
+        border-radius: .5rem;
+        box-shadow: var(--box-shadow);
+        color: var(--green);
+        cursor: pointer;
+        font-size: 1.7rem;
+        background: #fff;
+    }
+
+        .btn span {
+            padding: .7rem 1rem;
+            border-radius: .5rem;
+            background: var(--green);
+            color: #fff;
+            margin-left: .5rem;
+        }
+
+        .btn:hover {
+            background: var(--green);
+            color: #fff;
+        }
+
+            .btn:hover span {
+                color: var(--green);
+                background: #fff;
+                margin-left: 1rem;
+            }
+
+    .header {
+        padding: 2rem 9%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: black;
+    }
+
+        .header .logo {
+            font-size: 2.5rem;
+            color: var(--green);
+            text-decoration: none;
+        }
+
+            .header .logo i {
+                color: var(--green);
+            }
+
+        .header .navbar a {
+            font-size: 1.7rem;
+            color: var(--light-color);
+            margin-left: 2rem;
+        }
+
+            .header .navbar a:hover {
+                color: var(--green);
+                text-decoration: none;
+            }
+
+    #menu-btn {
+        font-size: 2.5rem;
+        border-radius: .5rem;
+        background: #eee;
+        color: var(--green);
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        display: none;
+    }
+
+    .home {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        padding-top: 10rem;
+    }
+
+        .home .image {
+            flex: 1 1 45rem;
+        }
+
+            .home .image img {
+                width: 40%;
+            }
+
+            .home .image .img1 {
+                width: 40%;
+            }
+
+        .home .content {
+            flex: 1 1 45rem;
+        }
+
+            .home .content h3 {
+                font-size: 4.5rem;
+                color: var(--black);
+                line-height: 1.8;
+                text-shadow: var(--text-shadow);
+            }
+
+            .home .content p {
+                font-size: 1.7rem;
+                color: var(--light-color);
+                line-height: 1.8;
+                padding: 1rem 0;
+            }
+
+    .icons-container {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+        .icons-container .icons {
+            border: var(--border);
+            box-shadow: var(--box-shadow);
+            border-radius: .5rem;
+            text-align: center;
+            padding: 2.5rem;
+        }
+
+            .icons-container .icons i {
+                font-size: 4.5rem;
+                color: var(--green);
+                padding-bottom: .7rem;
+            }
+
+            .icons-container .icons h3 {
+                font-size: 4.5rem;
+                color: var(--black);
+                padding: .5rem 0;
+                text-shadow: var(--text-shadow);
+            }
+
+            .icons-container .icons p {
+                font-size: 1.7rem;
+                color: var(--light-color);
+            }
+
+    .services .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+        gap: 2rem;
+    }
+
+        .services .box-container .box {
+            background: #fff;
+            border-radius: .5rem;
+            box-shadow: var(--box-shadow);
+            border: var(--border);
+            padding: 2.5rem;
+        }
+
+            .services .box-container .box i {
+                color: var(--green);
+                font-size: 5rem;
+                padding-bottom: .5rem;
+            }
+
+            .services .box-container .box h3 {
+                color: var(--black);
+                font-size: 2.5rem;
+                padding: 1rem 0;
+            }
+
+            .services .box-container .box p {
+                color: var(--light-color);
+                font-size: 1.4rem;
+                line-height: 2;
+            }
+
+    .about .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+        .about .row .image {
+            flex: 1 1 45rem;
+        }
+
+            .about .row .image img {
+                width: 100%;
+            }
+
+        .about .row .content {
+            flex: 1 1 45rem;
+        }
+
+            .about .row .content h3 {
+                color: var(--black);
+                text-shadow: var(--text-shadow);
+                font-size: 4rem;
+                line-height: 1.8;
+            }
+
+            .about .row .content p {
+                color: var(--light-color);
+                padding: 1rem 0;
+                font-size: 1.5rem;
+                line-height: 1.8;
+            }
+
+    .doctors .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 2rem;
+    }
+
+        .doctors .box-container .box {
+            text-align: center;
+            background: #fff;
+            border-radius: .5rem;
+            border: var(--border);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+        }
+
+            .doctors .box-container .box img {
+                height: 20rem;
+                border: var(--border);
+                border-radius: .5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .doctors .box-container .box h3 {
+                color: var(--black);
+                font-size: 2.5rem;
+            }
+
+            .doctors .box-container .box span {
+                color: var(--green);
+                font-size: 1.5rem;
+            }
+
+            .doctors .box-container .box .share {
+                padding-top: 2rem;
+            }
+
+                .doctors .box-container .box .share a {
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 4.5rem;
+                    font-size: 2rem;
+                    color: var(--green);
+                    border-radius: .5rem;
+                    border: var(--border);
+                    margin: .3rem;
+                }
+
+                    .doctors .box-container .box .share a:hover {
+                        background: var(--green);
+                        color: #fff;
+                        box-shadow: var(--box-shadow);
+                    }
+
+    .footer .credit {
+        padding: 1rem;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 2rem;
+        color: var(--light-color);
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+
+        .footer .credit span {
+            color: var(--green);
+        }
+</style>
+    </html>

@@ -1,4 +1,5 @@
 ﻿using HCMVC.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -14,6 +15,30 @@ namespace HCMVC.Controllers
         public DoctorController(IConfiguration configuration)
         {
             _configuration = configuration;
+        }
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Login(DoctorViewModel login)
+        {
+            if (ModelState.IsValid)
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new System.Uri(_configuration["ApiUrl:api"]);
+                    var result = await client.PostAsJsonAsync("Doctor/Login", login);
+                    if (result.IsSuccessStatusCode)
+                    {
+                        //string token = await result.Content.ReadAsAsync<string>();
+                        return RedirectToAction("DoctorDetails", "Doctor");
+                    }
+                    ModelState.AddModelError("", "Invalid Username or Password");
+                }
+            }
+            return View(login);
         }
         public async Task<IActionResult> DoctorDetails()
         {
