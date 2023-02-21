@@ -1,0 +1,38 @@
+﻿@model DoctorViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<body class="image">
+    <form asp-controller="Patient" asp-action="Create" method="post">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="mb-2">
+                    <label asp-for="DoctorName" class="form-label"></label>
+                    <input type="text" asp-for="DoctorName" class="form-control" />
+                    <span asp-validation-for="DoctorName"></span>
+                </div>
+                <div class="mb-2">
+                    <label asp-for="Specialization" class="form-label"></label>
+                    <input type="text" asp-for="Specialization" class="form-control" />
+                    <span asp-validation-for="Specialization"></span>
+                </div>
+                
+               
+                
+                <div class="mt-2 d-grid">
+                    <input type="submit" class="btn btn-primary" value="Add New" />
+                </div>
+            </div>
+        </div>
+    </form>
+    <a asp-controller="Home" asp-action="Index">Back to Home</a>
+</body>
+<style>
+    .image {
+        background-image: url("https://www.exchange4media.com/news-photo/109553-image28.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+

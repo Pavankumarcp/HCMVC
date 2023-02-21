@@ -12,6 +12,7 @@ namespace HCMVC.Models
         public DateTime SlotDate { get; set; }
         public string MobileNo { get; set; }
         public string UserName { get; set; }
-        public string Password { get; set; }
+
+        public int UserId { get; set; }
     }
 }

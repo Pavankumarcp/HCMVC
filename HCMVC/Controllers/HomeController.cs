@@ -27,6 +27,10 @@ namespace HCMVC.Controllers
         {
             return View();
         }
+        public IActionResult OurDoctors()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

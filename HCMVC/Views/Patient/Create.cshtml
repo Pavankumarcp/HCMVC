@@ -3,14 +3,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1 style="color:aliceblue;font-weight:bold;"> Create a New Admission</h1>
-<style>
-    .container {
-        border: 1px solid;
-    }
-</style>
-
-<body class="container" style="background-image: linear-gradient(rgba(1,1,1,0.4),rgba(3,9,20,0.7)),url(https://images.unsplash.com/photo-1614620026694-f5f38182ab9f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGxpYnJhcnklMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);color:aliceblue;font-weight:bold;">
+<h1 style="color:aliceblue;font-weight:bold;"> Book a new Appointment</h1>
+<body class="image">
     <form asp-controller="Patient" asp-action="Create" method="post">
         <div class="row">
             <div class="col-md-4">
@@ -45,11 +39,29 @@
                     <input type="text" asp-for="MobileNo" class="form-control" />
                     <span asp-validation-for="MobileNo"></span>
                 </div>
+                <div class="mb-2">
+                    <label asp-for="UserName" class="form-label"></label>
+                    <input type="text" asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName"></span>
+                </div>
+                <div class="mb-2">
+                    <label asp-for="UserId" class="form-label"></label>
+                    <input type="text" asp-for="UserId" class="form-control" />
+                    <span asp-validation-for="UserId"></span>
+                </div>
                 <div class="mt-2 d-grid">
                     <input type="submit" class="btn btn-primary" value="Add New" />
                 </div>
             </div>
         </div>
     </form>
-    <a asp-controller="Patient" asp-action="PatientDetails">Back to Home</a>
+    <a asp-controller="Home" asp-action="Index">Back to Home</a>
 </body>
+<style>
+    .image {
+            background-image: url("https://www.exchange4media.com/news-photo/109553-image28.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+</style>

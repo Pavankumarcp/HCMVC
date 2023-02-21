@@ -33,12 +33,14 @@ namespace HCMVC.Controllers
         }
         [Route("Patient/Details/{id}")]
         [HttpGet]
-        public async Task<IActionResult> Details(int id)
+       
+        public async Task<IActionResult> Details(int id,UserViewModel user)
         {
             PatientViewModel pat = null;
             using (var client = new HttpClient())
             {
                 client.BaseAddress = new Uri(_configuration["ApiUrl:api"]);
+                
                 var result = await client.GetAsync($"Patient/GetPatientById/{id}");
                 if (result.IsSuccessStatusCode)
                 {

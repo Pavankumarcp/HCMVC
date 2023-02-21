@@ -2,8 +2,88 @@
 @{
     ViewData["Title"] = "Index";
 }
+<head>
+<style>
+    /* Your CSS rules here */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(https://online.stanford.edu/sites/default/files/styles/widescreen_tiny/public/2020-07/Seminar-in-Artificial-Intelligence-in-Healthcare_CS522.jpg?itok=4s3CBibA);
+    }
 
-<body >
+    #container1 {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #header1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+        #header1 img {
+            height: 80px;
+            margin-right: 40px;
+        }
+
+    .form-container {
+        background-color: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #dddddd;
+    }
+
+    form {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        margin-bottom: 40px;
+        color: #333333;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    label {
+        font-weight: bold;
+        color: #333333;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #dddddd;
+        border-radius: 5px;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #forgot-password {
+        float: right;
+        color: #4CAF50;
+    }
+
+    #switch-to-employee {
+        display: block;
+    }
+</style>
+</head>
+
+<body class="image" >
     <div class="row">
         <div class="col-md-7">
             <div class="row">
@@ -11,28 +91,26 @@
                     <h2 style="color:black;font-weight:bold;">List Of Patients</h2>
                 </div>
             </div>
-            <div class="col text-end">
-                <a asp-controller="Patient" asp-action="Create" class="btn btn-warning">Create new Appointment</a>
-            </div>
             <div class="row">
                 <div>
-                    <table class="table">
+                    <table class="table"border="1">
 
                         <thead>
                             <tr style="color:black;font-weight:bold;">
                                 <th>Name</th>
+                                <th>Actions</th>
 
                             </tr>
                         </thead>
-                        <tbody style="color:lightgreen;font-weight:bold;">
+                        <tbody style="color:black;font-weight:bold;">
                             @foreach (var item in Model)
                             {
                                 <tr>
                                     <td>@item.FirstName</td>
                                     <td>
-                                        <a style="color:black" asp-controller="Patient" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                                        <a style="color:black" asp-controller="Patient" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                                        <a style="color:black" asp-controller="Patient" asp-action="Edit" asp-route-id="@item.Id">Edit</a>&nbsp;
+                                        <a style="color:blue" asp-controller="Patient" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                        <a style="color:blue" asp-controller="Patient" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                                        <a style="color:blue" asp-controller="Patient" asp-action="Edit" asp-route-id="@item.Id">Edit</a>&nbsp;
 
                                     </td>
                                 </tr>
@@ -44,3 +122,10 @@
         </div>
     </div>
 </body>
+<style>
+    .image {
+        background-image: url("https://media.istockphoto.com/id/936129188/vector/medical-team-and-healthcare-app.jpg?s=612x612&w=0&k=20&c=WaJu3x4riIP8yt4Jseo153egSeMeZD6U4GszrDzYPKA=");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>

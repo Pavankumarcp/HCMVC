@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewData["Title"] = "OurDoctors";
+}
+<!DOCTYPE html>
+<html lang="en">
+    <body class="image">
+    <section class="doctors" id="doctors">
+
+        <h1 class="heading"> our <span>doctors</span> </h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="https://www.pngitem.com/pimgs/m/515-5158817_telemedicine-doctor-hd-png-download.png" alt="">
+                <h3>Dr Kumar Mishra</h3>
+                <span>Expert in cardiology</span>
+            </div>
+
+
+            <div class="box">
+
+
+                <img src="https://t3.ftcdn.net/jpg/02/95/51/80/360_F_295518052_aO5d9CqRhPnjlNDTRDjKLZHNftqfsxzI.jpg" />
+                <h3>Dr Ranveer</h3>
+                <span>Expert in general checkup</span>
+            </div>
+
+
+
+        </div>
+
+    </section>
+    </body>
+    
+    </html>
+    <style>
+    .image {
+        background-image: url("https://images.pexels.com/photos/281260/pexels-photo-281260.jpeg?cs=srgb&dl=pexels-francesco-ungaro-281260.jpg"); 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .doctors .box-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        gap: 2rem;
+    }
+
+        .doctors .box-container .box {
+            text-align: center;
+            background: #fff;
+            border-radius: .5rem;
+            border: var(--border);
+            box-shadow: var(--box-shadow);
+            padding: 2rem;
+        }
+
+            .doctors .box-container .box img {
+                height: 20rem;
+                border: var(--border);
+                border-radius: .5rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+
+            .doctors .box-container .box h3 {
+                color: var(--black);
+                font-size: 2.5rem;
+            }
+
+            .doctors .box-container .box span {
+                color: var(--green);
+                font-size: 1.5rem;
+            }
+
+            .doctors .box-container .box .share {
+                padding-top: 2rem;
+            }
+
+                .doctors .box-container .box .share a {
+                    height: 5rem;
+                    width: 5rem;
+                    line-height: 4.5rem;
+                    font-size: 2rem;
+                    color: var(--green);
+                    border-radius: .5rem;
+                    border: var(--border);
+                    margin: .3rem;
+                }
+
+                    .doctors .box-container .box .share a:hover {
+                        background: var(--green);
+                        color: #fff;
+                        box-shadow: var(--box-shadow);
+                    }
+
+    .footer .credit {
+        padding: 1rem;
+        padding-top: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        font-size: 2rem;
+        color: var(--light-color);
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+
+        .footer .credit span {
+            color: var(--green);
+        }
+    </style>
+
+
